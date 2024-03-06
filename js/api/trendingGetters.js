@@ -16,8 +16,8 @@ export const getTrending = async (baseUrl) => {
 
 export const getTrendingMovies = async (baseUrl) => {
     const response = await fetch(baseUrl + "movie/day?language=en-US", options);
-    const data = await response.json();
-    return data;
+    const movie = await response.json();
+    return movie;
 }
 
 /** getTrendingMovies
