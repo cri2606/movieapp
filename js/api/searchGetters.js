@@ -1,7 +1,7 @@
-import {options} from "./config.js";
+import {OPTIONS, BASEURL} from "./config.js";
 
-export const getSearchActor = async (baseUrl, attore) => {
-    const response = await fetch(baseUrl + `search/person?query=${attore}`, options);
+export const getSearchActor = async (attore) => {
+    const response = await fetch(`${BASEURL}search/person?query=${attore}`, OPTIONS);
     const actor = await response.json();
     return actor;
 }

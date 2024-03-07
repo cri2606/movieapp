@@ -1,25 +1,25 @@
-import {options} from "./config.js";
+import {OPTIONS, BASEURL} from "./config.js";
 
-export const getTrending = async (baseUrl) => {
-    const response = await fetch(baseUrl + "trending/all/day?language=en-US", options);
+export const getTrending = async () => {
+    const response = await fetch(BASEURL + "trending/all/day?language=en-US", OPTIONS);
     const data = await response.json();
     return data;
 }
 
-export const getTrendingMovies = async (baseUrl) => {
-    const response = await fetch(baseUrl + "trending/movie/day?language=en-US", options);
+export const getTrendingMovies = async () => {
+    const response = await fetch(BASEURL + "trending/movie/day?language=en-US", OPTIONS);
     const movie = await response.json();
     return movie;
 }
 
-export const getTrendingPeople = async (baseUrl) => {
-    const response = await fetch(baseUrl + "trending/person/day?language=en-US", options);
+export const getTrendingPeople = async () => {
+    const response = await fetch(BASEURL + "trending/person/day?language=en-US", OPTIONS);
     const people = await response.json();
     return people;
 }
 
-export const getTrendingTV = async (baseUrl) => {
-    const response = await fetch(baseUrl + "trending/tv/day?language=en-US", options);
+export const getTrendingTV = async () => {
+    const response = await fetch(BASEURL + "trending/tv/day?language=en-US", OPTIONS);
     const tv = await response.json();
     return tv;
 }
