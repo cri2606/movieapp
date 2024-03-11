@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie app</title>
+</head>
+<body>
+    <div id="titolo">
+        <h1 id="header">Movie Ap</h1>
+    </div> 
+</body>
+<script type="module">
+    import { fixTitle, addParagraph } from "./js/utils/dom.js";
+    import { getTrendingMovies } from "./js/api/trendingGetters.js";
+    fixTitle();
+    addParagraph();
+    console.log(getTrendingMovies());
+</script>
+</html>
