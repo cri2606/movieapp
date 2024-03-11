@@ -9,12 +9,22 @@
     <div id="titolo">
         <h1 id="header">Movie Ap</h1>
     </div> 
+    <ul id="trending-movies-list"></ul>
+    <ul id="trending-people-list"></ul>
+    <ul id="trending-tv-list"></ul>
 </body>
 <script type="module">
     import { fixTitle, addParagraph } from "./js/utils/dom.js";
-    import { getTrendingMovies } from "./js/api/trendingGetters.js";
+    import { getTrendingMovies, getTrendingPeople, getTrendingTV } from "./js/api/trendingGetters.js";
+    import { createTrendingMoviesList } from "./js/dom-manipulator/createList.js";
     fixTitle();
     addParagraph();
     console.log(getTrendingMovies());
+    const movieData = await getTrendingMovies();
+    const peopleData = await getTrendingPeople();
+    const tvData = await getTrendingTV();
+    createTrendingMoviesList(movieData.results, "trending-movies-list");
+    createTrendingMoviesList(peopleData.results, "trending-people-list");
+    createTrendingMoviesList(tvData.results, "trending-tv-list");
 </script>
 </html>
