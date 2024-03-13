@@ -1,6 +1,7 @@
 import {getTrending, getTrendingMovies, getTrendingPeople, getTrendingTV} from "./api/trendingGetters.js";
 import {getSearchActor} from "./api/searchGetters.js";
-export { getTrendingMovies } from "./api/trendingGetters.js";
+export { getTrendingMovies, getTrendingPeople, getTrendingTV } from "./api/trendingGetters.js";
+export { getSearchActor } from "./api/searchGetters.js";
 //importare la chiave e configurarla
 /**poster_path
  * title
@@ -27,7 +28,7 @@ const trendingPeople = getTrendingPeople().then((data) => {
 });
 const trendingTV = getTrendingTV().then((data) => {
     console.log(data)
-});;
-const searchActor = getSearchActor("clooney").then((data) => {
+});
+const searchActor = getSearchActor().then((data) => {
     console.log(data)
 });
