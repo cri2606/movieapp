@@ -6,7 +6,7 @@
  * @param Array dei film
  * @returns 
  */
-/*export const createTrendingList = (data, listID) => {
+export const createTrendingList = (data, listID) => {
     // recupero il nodo con id trending-movies-list
     const list = document.getElementById(listID);
     // ciclo su ogni elemento dell'array che viene preso in ingresso come parametro
@@ -22,13 +22,13 @@
           // appendiamo alla pagina hmtl il nuovo tag creato. Dove? sul tag recuperato
           list.appendChild(listElement);
     });
-}*/
+}
 
 export const createCard = (data, cardID) => {
     const cardContainer = document.getElementById(cardID);
     data.forEach(element => {
         const card = document.createElement("div");
-        card.className = "col-md-4";
+        card.className = "col-12 col-md-6 col-lg-4";
         const cardInner = document.createElement("div");
         cardInner.className = "card flex-column h-100";
         const cardImage = document.createElement("img");
@@ -43,24 +43,31 @@ export const createCard = (data, cardID) => {
         const cardButtonContainer = document.createElement("div");
         cardButtonContainer.className = "card-button-container";
         const cardButton = document.createElement("a");
-        cardButton.href = "#";
-        cardButton.className = "btn btn-primary";
+        cardButton.className = "btn btn-dark";
 
         if (cardID === "trendingMovies" || cardID === "trendingTV") {
             cardImage.src = `https://image.tmdb.org/t/p/w500${element.backdrop_path}`;
-            if (element.media_type === "movie")
+            if (element.media_type === "movie"){
                 cardTitle.textContent = element.title;
-            else
+                cardButton.href = `https://www.google.com/search?q=${element.title}%20(movie)`;
+            }
+            else{
                 cardTitle.textContent = element.name;
+                cardButton.href = `https://www.google.com/search?q=${element.name}%20(TV%20Series)`;
+            }
             cardDescription.textContent = element.overview;
         } else {
             if (element.profile_path !== null) {
                 cardImage.src = `https://image.tmdb.org/t/p/w500${element.profile_path}`;
             } else {
                 // Se profile_path è null, non impostare alcuna immagine
-                cardImage.style.display = "none";
+                cardImage.src = "https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg";
+                cardImage.style="padding-top: 25%";
+                textContainer.className = "card-body";
+                textContainer.style="padding-top: 30%";
             }
             cardTitle.textContent = element.name;
+            cardButton.href = `https://www.google.com/search?q=${element.name}`;
             cardDescription.innerHTML = `<b><i>Role:</i></b> ${element.known_for_department}<br><b><i>Popularity:</i></b> ${element.popularity}<br><b><i>Known For:</i></b>`;
             if (element.known_for) {
                 const knownForList = document.createElement("ul");
@@ -77,15 +84,22 @@ export const createCard = (data, cardID) => {
         }
 
         cardButton.textContent = "Learn More";
+        cardButton.target = "_blank";
 
         textContainer.appendChild(cardTitle);
         textContainer.appendChild(cardDescription);
         cardInner.appendChild(cardImage);
         cardInner.appendChild(textContainer);
-        card.appendChild(cardInner);
+        card.appendChild(cardInner);    
         cardButtonContainer.appendChild(cardButton);
         cardInner.appendChild(cardButtonContainer);
         cardContainer.appendChild(card);
     });
 }
+
+
+
+
+
+
 
