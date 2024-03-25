@@ -56,7 +56,7 @@ body {
 .u-nav {
     --s: 0.1em;
     /* the thickness of the line */
-    --c: #198754;
+    --c: red;
     /* the color */
 
     color: #fff;

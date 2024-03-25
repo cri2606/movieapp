@@ -64,7 +64,7 @@ export const createCard = (data, cardID) => {
             } else {
                 // Se profile_path è null, non impostare alcuna immagine
                 cardImage.src = "https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg";
-                cardImage.style="padding-top: 25%";
+                cardImage.style="padding-top: 25%; background-color: transparent;";
                 textContainer.className = "card-body";
                 textContainer.style="padding-top: 30%";
             }
