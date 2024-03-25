@@ -54,7 +54,7 @@
             transform: rotateY(180deg);
         } */
 
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
 
         * {
             margin: 0;
@@ -63,7 +63,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-         .container {
+        .container {
             width: 100%;
             min-height: 100vh;
             display: flex;
@@ -71,7 +71,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 120px;
-        } 
+        }
 
         .button {
             position: relative;
@@ -86,9 +86,9 @@
             letter-spacing: 0.1rem;
             transition: 0.5s;
             z-index: 1;
-        }
+        } */
 
-        .button:hover {
+        /* .button:hover {
             color: #fff;
             border: 2px solid rgba(0, 0, 0, 0);
             box-shadow: 0 0 0px var(--color);
@@ -194,6 +194,48 @@
 
         .button:hover span:nth-child(4) {
             bottom: 50%;
+        } */
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        /* :root {
+            --background-color: #fff;
+            --text-color: black;
+        } */
+
+       /* body {
+            margin: 0;
+        } */
+ 
+        .wrapper {
+            display: grid;
+            place-content: center;
+            background-color: #fff;
+            min-height: 100vh;
+            font-family: "Oswald", sans-serif;
+            font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        .wrapper>div {
+            grid-area: 1/1/-1/-1;
+        }
+
+        .top {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+        }
+
+        .bottom {
+            clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+            color: transparent;
+            background: -webkit-linear-gradient(177deg, black 53%, black 65%);
+            background: linear-gradient(177deg, white 53%, black 65%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transform: translateX(-0.02em);
         }
     </style>
 </head>
@@ -229,7 +271,7 @@
         </div>
     </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
         <a class="button" href="#" style="--color:#1e9bff;">
             <span></span>
             <span></span>
@@ -251,7 +293,11 @@
             <span></span>
             Button
         </a>
-    </div>
+    </div> -->
+    <section class="wrapper">
+        <div class="top">Sliced</div>
+        <div class="bottom" aria-hidden="true">Sliced</div>
+    </section>
 </body>
 
 </html>
