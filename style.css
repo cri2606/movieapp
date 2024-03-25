@@ -26,6 +26,7 @@ body {
 .card {
     flex: 0 0 auto;
     scroll-snap-align: start;
+    background-color: transparent!important;
 }
 
 .card img {
