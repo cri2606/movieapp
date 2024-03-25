@@ -7,7 +7,7 @@ body {
 }
 
 .scrolling {
-    scroll-margin-top: 85px;
+    scroll-margin-top: 105px;
 }
 
 .card-text {
@@ -55,16 +55,15 @@ body {
 .u-nav {
     --s: 0.1em;
     /* the thickness of the line */
-    --c: #FFA500;
+    --c: #198754;
     /* the color */
 
     color: #fff;
     padding-bottom: var(--s);
     background:
-        linear-gradient(90deg, var(--c) 50%, #fff 0) calc(100% - var(--_p, 0%))/200% 100%,
-        linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
-    -webkit-background-clip: text, padding-box;
-    background-clip: text, padding-box;
+        linear-gradient(90deg, var(--c) 50%, #fff 0) calc(100% - var(--_p, 0%))/200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
     transition: 0.5s;
 }
 
@@ -85,6 +84,22 @@ body {
     cursor: pointer;
 }
 
+.nav_img{
+    width: 100%;
+    height: auto;
+}
+
+.navbar-brand{
+    width: 50px;
+}
+
+.nav-item{
+    font-size: 20px;
+}
+
+.bg-nav{
+    background-color: #1e9bff!important;
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
 
 * {
