@@ -43,7 +43,9 @@ export const createCard = (data, cardID) => {
         const cardButtonContainer = document.createElement("div");
         cardButtonContainer.className = "card-button-container";
         const cardButton = document.createElement("a");
-        cardButton.className = "btn btn-dark";
+        cardButton.innerHTML = "<span></span><span></span> Learn More";
+        cardButton.className = "button";
+        cardButton.style = "color: #1e9bff;";
 
         if (cardID === "trendingMovies" || cardID === "trendingTV") {
             cardImage.src = `https://image.tmdb.org/t/p/w500${element.backdrop_path}`;
@@ -83,7 +85,7 @@ export const createCard = (data, cardID) => {
             }
         }
 
-        cardButton.textContent = "Learn More";
+        //cardButton.textContent = "Learn More";
         cardButton.target = "_blank";
 
         textContainer.appendChild(cardTitle);
