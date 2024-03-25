@@ -64,7 +64,7 @@
       </div>
       <script>
 
-            document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', () => {
                   const cardContainers = document.querySelectorAll('.card-container');
 
                   cardContainers.forEach(container => {
@@ -124,11 +124,11 @@
                   });
             });
 
-            document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', () => {
                   const navbarToggler = document.querySelector('.navbar-toggler');
                   const navbarCollapse = document.querySelector('.navbar-collapse');
 
-                  navbarToggler.addEventListener('click', function () {
+                  navbarToggler.addEventListener('click', () => {
                         navbarCollapse.classList.toggle('show');
 
                         if (navbarCollapse.classList.contains('show')) {
