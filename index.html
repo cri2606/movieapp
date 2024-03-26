@@ -41,8 +41,6 @@
                               <li class="nav-item">
                                     <a class="nav-link mx-2" href="#Actors"><span class="u-nav">Search People</span></a>
                               </li>
-                              <!-- <li class="nav-item"> -->
-                              <!-- </li> -->
                         </ul>
                         <form id="searchActorForm" class="form-inline my-2 my-lg-0" action="#Actors">
                               <div class="input-group">
@@ -117,7 +115,7 @@
       const movieData = await getTrendingMovies();
       const peopleData = await getTrendingPeople();
       const tvData = await getTrendingTV();
-      const actorData = await getSearchActor("clooney");
+      const actorData = await getSearchActor("");
       createCard(movieData.results, "trendingMovies");
       createCard(peopleData.results, "trendingPeople");
       createCard(tvData.results, "trendingTV");
