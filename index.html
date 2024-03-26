@@ -117,7 +117,7 @@
       const movieData = await getTrendingMovies();
       const peopleData = await getTrendingPeople();
       const tvData = await getTrendingTV();
-      const actorData = await getSearchActor("");
+      const actorData = await getSearchActor("clooney");
       createCard(movieData.results, "trendingMovies");
       createCard(peopleData.results, "trendingPeople");
       createCard(tvData.results, "trendingTV");

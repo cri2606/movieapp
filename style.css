@@ -88,6 +88,11 @@ body {
 .nav_img {
     width: 100%;
     height: auto;
+    transition: transform .3s; /* Animation */
+}
+
+.nav_img:hover{
+    transform: scale(1.2); 
 }
 
 .navbar-brand {
@@ -96,6 +101,11 @@ body {
 
 .nav-item {
     font-size: 20px;
+    transition: transform .3s; /* Animation */
+}
+
+.nav-item:hover{
+    transform: scale(1.1); 
 }
 
 .bg-nav {
