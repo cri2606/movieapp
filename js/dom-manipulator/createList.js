@@ -28,7 +28,7 @@ export const createCard = (data, cardID) => {
     const cardContainer = document.getElementById(cardID);
     data.forEach(element => {
         const card = document.createElement("div");
-        card.className = "col-12 col-md-6 col-lg-4";
+        //card.className = "col-12 col-md-6 col-lg-4";
         const cardInner = document.createElement("div");
         cardInner.className = "card flex-column h-100";
         const cardImage = document.createElement("img");
