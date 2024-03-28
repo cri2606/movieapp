@@ -36,15 +36,13 @@
                         <h3 class="card-title gap" id="results"></h3>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-success my-2" href="index.html">Home Page</a>
+                        <a class="btn btn-primary my-2" href="index.html">Home Page</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <div class="container">
-        <!-- <h3 class="card-title" id="results"></h3> -->
         <div class="card-container">
             <div class="owl-carousel" id="searchActor"></div>
         </div>
@@ -55,19 +53,20 @@
     import { getSearchActor } from "./js/index.js";
     import { createCard } from "./js/dom-manipulator/createList.js";
 
+    //leggo il valore inserito in input nel form di ricerca e lo assegno a una variabile
     const getQueryParam = (name) => {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
     }
 
     const searchQuery = getQueryParam('query');
-
     document.getElementById('results').innerHTML = `Results for: ${searchQuery.toUpperCase()}`;
+
+    //mostro i risultati
     const searchActorData = await getSearchActor(searchQuery);
-    const cardC = document.getElementById("searchActor");
-    cardC.innerHTML = "";
     createCard(searchActorData.results, "searchActor");
-    // Inizializza Owl Carousel
+
+    //owl carousel
     $(document).ready(function () {
         $('.owl-carousel').owlCarousel({
             loop: true,

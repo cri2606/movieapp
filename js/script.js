@@ -1,3 +1,5 @@
+//quando l'hamburger menu viene viene aperto mostra la X di chiusura
+//quando la X viene cliccata viene mostrato nuovamente l'icoca dell'hamburger
 document.addEventListener('DOMContentLoaded', () => {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const closeIcon = document.querySelector('.close-icon');
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//cambio sfondo navbar allo scroll della pagina
 window.addEventListener('scroll', () => {
     var navbar = document.getElementById('navBar');
     if (window.scrollY > 50) 
