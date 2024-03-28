@@ -43,7 +43,7 @@ export const createCard = (data, cardID) => {
         const cardButtonContainer = document.createElement("div");
         cardButtonContainer.className = "card-button-container";
         const cardButton = document.createElement("a");
-        cardButton.innerHTML = "<span></span><span></span> Learn More";
+        cardButton.innerHTML = "Learn More";
         cardButton.className = "button";
         cardButton.style = "color: #1e9bff;";
 
@@ -62,7 +62,7 @@ export const createCard = (data, cardID) => {
             if (element.profile_path !== null) {
                 cardImage.src = `https://image.tmdb.org/t/p/w500${element.profile_path}`;
             } else {
-                // Se profile_path è null, non impostare alcuna immagine
+                // Se profile_path è null, imposta immagine di utente senza foto profilo
                 cardImage.src = "./assets/user.png";
                 cardImage.style="padding-top: 25%; background-color: transparent;";
                 textContainer.className = "card-body";
@@ -84,8 +84,7 @@ export const createCard = (data, cardID) => {
                 cardDescription.appendChild(knownForList);
             }
         }
-
-        //cardButton.textContent = "Learn More";
+        
         cardButton.target = "_blank";
 
         textContainer.appendChild(cardTitle);

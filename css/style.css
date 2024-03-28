@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: linear-gradient(109.6deg, rgba(254, 253, 205, 1) 11.2%, rgba(163, 230, 255, 1) 91.1%) !important;
     font-family: "Verdana", sans-serif !important;
@@ -38,13 +44,8 @@ body {
     transition: transform 0.5s;
 }
 
-.card img:hover {
-    transform: rotateY(180deg) scaleX(-1);
-}
-
 .u-h3 {
     --c: #007bff;
-    /* the color */
 
     color: #0000;
     padding-bottom: var(--s);
@@ -55,44 +56,18 @@ body {
     transition: 0.5s;
 }
 
-.u-nav {
-    --c: red;
-    /* the color */
-
-    color: #fff;
-    padding-bottom: var(--s);
-    background:
-        linear-gradient(90deg, var(--c) 50%, #fff 0) calc(100% - var(--_p, 0%))/200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    transition: 0.5s;
-}
-
-.u-h3:hover {
-    --_p: 100%;
-}
-
 .u-h3 {
-    cursor: pointer;
-}
-
-.u-nav:hover {
-    --_p: 100%;
-    color: #0000;
-}
-
-.u-nav {
     cursor: pointer;
 }
 
 .nav_img {
     width: 100%;
     height: auto;
-    transition: transform .3s; /* Animation */
+    transition: transform .3s;
 }
 
-.nav_img:hover{
-    transform: scale(1.2); 
+.nav_img:hover {
+    transform: scale(1.2);
 }
 
 .navbar-brand {
@@ -101,29 +76,30 @@ body {
 
 .nav-item {
     font-size: 20px;
-    transition: transform .3s; /* Animation */
+    transition: transform .3s;
 }
 
-.nav-item:hover{
-    transform: scale(1.1); 
+.nav-item:hover {
+    transform: scale(1.1);
 }
 
-.bg-nav {
-    background-color: #1e9bff !important;
+.navbar-collapse.show .nav-item:hover {
+    transform: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
     padding: 0;
-    box-sizing: border-box;
-    /* font-family: 'Poppins', sans-serif; */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 :root {
-    --color: #1e9bff;
-    /* Definizione della variabile --color con il colore blu elettrico */
+    --color: #1e9bff; /* Definizione della variabile --color con il colore blu elettrico */
 }
 
 .card-button-container {
@@ -178,61 +154,6 @@ body {
         0 0 60px var(--color) !important;
 }
 
-.button span {
-    position: absolute !important;
-    background: var(--color) !important;
-    pointer-events: none !important;
-    border-radius: 2px;
-    box-shadow: 0 0 10px var(--color),
-        0 0 20px var(--color),
-        0 0 30px var(--color),
-        0 0 50px var(--color),
-        0 0 100px var(--color) !important;
-    transition: 0.5s ease-in-out !important;
-    transition-delay: 0.25s !important;
-}
-
-.button:hover span {
-    opacity: 0 !important;
-    transition-delay: 0s !important;
-}
-
-.button span:nth-child(1),
-.button span:nth-child(2) {
-    width: 40px !important;
-    height: 4px !important;
-}
-
-.button:hover span:nth-child(1),
-.button:hover span:nth-child(2) {
-    transform: translateX(0) !important;
-}
-
-.button:hover span:nth-child(1),
-.button:hover span:nth-child(2) {
-    transform: translateY(0) !important;
-}
-
-.button span:nth-child(1) {
-    top: calc(50% - 2px) !important;
-    left: -50px !important;
-    transform-origin: left !important;
-}
-
-.button:hover span:nth-child(1) {
-    left: 50% !important;
-}
-
-.button span:nth-child(2) {
-    top: calc(50% - 2px) !important;
-    right: -50px !important;
-    transform-origin: right !important;
-}
-
-.button:hover span:nth-child(2) {
-    right: 50% !important;
-}
-
 .wrapper {
     display: grid;
     background-color: transparent !important;
@@ -241,7 +162,7 @@ body {
     font-weight: 20;
     text-transform: uppercase;
     color: black;
-    padding: 3% 0 3% 0;
+    padding: 2% 0 2% 0;
 }
 
 .wrapper>div {
@@ -297,9 +218,18 @@ body {
     height: 475px !important;
 }
 
- #searchActor .owl-item .card {
+#searchActor .owl-item .card {
     width: 100%;
     height: 800px !important;
+}
+
+h3 {
+    padding: 3% 0 3% 0;
+}
+
+.gap {
+    margin-right: 3rem !important;
+    margin-left: 0 !important;
 }
 
 @media screen and (max-width:768px) {

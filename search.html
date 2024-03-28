@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieApp</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-hibH2QhJ7w1ggi3GD/bG0I3QeUu4Svz+a4fFmIYiUoHQpLMY3xFqPC2twXhXtpBx"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg p-3 sticky-top mb-5" id="navBar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="nav_img"
+                    src="https://play-lh.googleusercontent.com/09V0Z-LB9y7-RA3yygmRdYaNtt-w1LExNEdctz7txCmIy11E_Z0ZCLDeUwwKYK5UXA"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="close-icon visually-hidden">X</span>
+            </button>
+
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto font-weight-bold">
+                    <li class="nav-item">
+                        <h3 class="card-title gap" id="results"></h3>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-success my-2" href="index.html">Home Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- <h3 class="card-title" id="results"></h3> -->
+        <div class="card-container">
+            <div class="owl-carousel" id="searchActor"></div>
+        </div>
+    </div>
+
+</body>
+<script type="module">
+    import { getSearchActor } from "./js/index.js";
+    import { createCard } from "./js/dom-manipulator/createList.js";
+
+    const getQueryParam = (name) => {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    const searchQuery = getQueryParam('query');
+
+    document.getElementById('results').innerHTML = `Results for: ${searchQuery.toUpperCase()}`;
+    const searchActorData = await getSearchActor(searchQuery);
+    const cardC = document.getElementById("searchActor");
+    cardC.innerHTML = "";
+    createCard(searchActorData.results, "searchActor");
+    // Inizializza Owl Carousel
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
+            }
+        });
+    });
+
+</script>
+
+</html>
