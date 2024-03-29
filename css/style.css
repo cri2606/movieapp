@@ -38,6 +38,7 @@ body {
     flex: 0 0 auto;
     scroll-snap-align: start;
     background-color: transparent !important;
+    box-shadow: 8px 5px 10px #C0C0C0;
 }
 
 .card img {
@@ -203,25 +204,6 @@ body {
     color: #0000;
 }
 
-#trendingMovies .owl-item .card {
-    width: 100%;
-    height: 475px !important;
-}
-
-#trendingPeople .owl-item .card {
-    width: 100%;
-    height: 800px !important;
-}
-
-#trendingTV .owl-item .card {
-    width: 100%;
-    height: 475px !important;
-}
-
-#searchActor .owl-item .card {
-    width: 100%;
-    height: 800px !important;
-}
 
 h3 {
     padding: 3% 0 3% 0;
@@ -232,162 +214,183 @@ h3 {
     margin-left: 0 !important;
 }
 
+#trendingMovies .owl-item .card {
+    width: 100%;
+    height: auto !important;
+}
+
+#trendingPeople .owl-item .card {
+    width: 100%;
+}
+
+#trendingTV .owl-item .card {
+    width: 100%;
+    height: auto !important;
+}
+
+#searchActor .owl-item .card {
+    width: 100%;
+}
+
 @media screen and (max-width:400px) {
 
     #trendingMovies .owl-item .card {
-        width: 100%;
-        height: 500px !important;
-    }
-
-    #trendingPeople .owl-item .card {
-        width: 100%;
-        height: 800px !important;
+        min-height: 420px;
     }
 
     #trendingTV .owl-item .card {
-        width: 100%;
-        height: 500px !important;
+        min-height: 420px;
+    }
+
+    #trendingPeople .owl-item .card {
+        height: 625px !important;
     }
 
     #searchActor .owl-item .card {
-        width: 100%;
-        height: 800px !important;
+        height: 6255px !important;
+    }
+
+    .wrapper {
+        font-size: 35px;
+        text-align: center;
     }
 }
 
 @media screen and (min-width: 401px) and (max-width:500px) {
 
     #trendingMovies .owl-item .card {
-        width: 100%;
-        height: 525px !important;
-    }
-
-    #trendingPeople .owl-item .card {
-        width: 100%;
-        height: 925px !important;
+        min-height: 480px;
     }
 
     #trendingTV .owl-item .card {
-        width: 100%;
-        height: 525px !important;
+        min-height: 480px;
+    }
+
+    #trendingPeople .owl-item .card {
+        height: 755px !important;
     }
 
     #searchActor .owl-item .card {
-        width: 100%;
-        height: 925px !important;
+        height: 755px !important;
+    }
+
+    .wrapper {
+        font-size: 40px;
+        text-align: center;
     }
 }
 
-@media screen and (min-width:501px) and (max-width:768px) {
-
-    #trendingMovies .owl-item .card {
-        width: 100%;
-        height: 550px !important;
+@media screen and (min-width:501px) and (max-width:600px) {
+    .wrapper {
+        font-size: 45px;
+        text-align: center;
     }
 
     #trendingPeople .owl-item .card {
-        width: 100%;
-        height: 1050px !important;
-    }
-
-    #trendingTV .owl-item .card {
-        width: 100%;
-        height: 550px !important;
+        height: 890px !important;
     }
 
     #searchActor .owl-item .card {
-        width: 100%;
-        height: 1050px !important;
+        height: 890px !important;
     }
 }
 
-@media screen and (min-width:769px ) and (max-width:992px) {
-    #trendingMovies .owl-item .card {
-        width: 100%;
-        height: 475px !important;
+@media screen and (min-width:601px) and (max-width:768px) {
+
+    .wrapper {
+        font-size: 45px;
+        text-align: center;
     }
 
     #trendingPeople .owl-item .card {
-        width: 100%;
-        height: 775px !important;
-    }
-
-    #trendingTV .owl-item .card {
-        width: 100%;
-        height: 475px !important;
+        height: 875px !important;
     }
 
     #searchActor .owl-item .card {
-        width: 100%;
-        height: 775px !important;
+        height: 875px !important;
     }
 }
 
-@media screen and (min-width:993px) and (max-width:1200px){
+@media screen and (min-width:769px) and (max-width:992px) {
 
     #trendingMovies .owl-item .card {
-        width: 100%;
-        height: 450px !important;
-    }
-
-    #trendingPeople .owl-item .card {
-        width: 100%;
-        height: 700px !important;
+        min-height: 405px;
     }
 
     #trendingTV .owl-item .card {
-        width: 100%;
-        height: 450px !important;
+        min-height: 405px;
+    }
+
+    #trendingPeople .owl-item .card {
+        height: 610px !important;
     }
 
     #searchActor .owl-item .card {
-        width: 100%;
-        height: 700px !important;
+        height: 610px !important;
     }
 }
 
-@media screen and (min-width:1201px) and (max-width:1400px){
+@media screen and (min-width:993px) and (max-width:1200px) {
 
     #trendingMovies .owl-item .card {
-        width: 100%;
-        height: 500px !important;
+        min-height: 380px;
     }
 
     #trendingPeople .owl-item .card {
-        width: 100%;
-        height: 800px !important;
+        height: 580px !important;
     }
 
     #trendingTV .owl-item .card {
-        width: 100%;
-        height: 500px !important;
+        min-height: 380px;
     }
 
     #searchActor .owl-item .card {
-        width: 100%;
-        height: 800px !important;
+        height: 580px !important;
+    }
+
+    #trendingMovies .card-text {
+        max-height: 70px;
+    }
+
+    #trendingTV .card-text {
+        max-height: 70px;
     }
 }
 
-@media screen and (min-width:1401px){
+@media screen and (min-width:1201px) and (max-width:1400px) {
 
     #trendingMovies .owl-item .card {
-        width: 100%;
-        height: 500px !important;
-    }
-
-    #trendingPeople .owl-item .card {
-        width: 100%;
-        height: 900px !important;
+        min-height: 415px;
     }
 
     #trendingTV .owl-item .card {
-        width: 100%;
-        height: 500px !important;
+        min-height: 415px;
+    }
+
+    #trendingPeople .owl-item .card {
+        height: 650px !important;
     }
 
     #searchActor .owl-item .card {
-        width: 100%;
-        height: 900px !important;
+        height: 650px !important;
+    }
+}
+
+@media screen and (min-width:1401px) {
+
+    #trendingMovies .owl-item .card {
+        min-height: 450px;
+    }
+
+    #trendingTV .owl-item .card {
+        min-height: 450px;
+    }
+
+    #trendingPeople .owl-item .card {
+        height: 745px !important;
+    }
+
+    #searchActor .owl-item .card {
+        height: 745px !important;
     }
 }

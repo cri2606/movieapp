@@ -39,6 +39,7 @@ export const createCard = (data, cardID) => {
         const cardButton = document.createElement("a");
 
         //classi CSS
+        card.className = "mx-5";
         cardInner.className = "card flex-column h-100";
         cardImage.className = "card-img-top";
         textContainer.className = "card-body";
