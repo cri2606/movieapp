@@ -19,6 +19,8 @@ body {
 
 .card-title {
     font-weight: bold;
+    max-height: 50px !important;
+    overflow: hidden !important;
 }
 
 .card-text {
@@ -38,7 +40,6 @@ body {
     flex: 0 0 auto;
     scroll-snap-align: start;
     background-color: transparent !important;
-    box-shadow: 8px 5px 10px #C0C0C0;
 }
 
 .card img {
@@ -212,6 +213,10 @@ h3 {
 .gap {
     margin-right: 3rem !important;
     margin-left: 0 !important;
+}
+
+#navBar{
+    box-shadow: 5px 10px 8px #999999;
 }
 
 #trendingMovies .owl-item .card {
